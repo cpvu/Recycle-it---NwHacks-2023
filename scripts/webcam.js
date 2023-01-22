@@ -59,9 +59,4 @@ async function predict() {
     return dict[a] > dict[b] ? a : b;
   });
 
-  if (result == "Other") {
-    labelContainer.innerHTML = "";
-  } else {
-    labelContainer.innerHTML = result;
-  }
 }
