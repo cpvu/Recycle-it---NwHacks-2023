@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    background-color:  rgba(15, 151, 72, 0.2);
 }
 
 .container {
@@ -102,6 +103,7 @@ nav a:hover {
     height: 200px;
     width: 100%;
     text-align: center;
+    color: white;
 }
 
 footer {
