@@ -60,30 +60,35 @@ async function predict() {
   });
 
   if (result == "Compostable Foods") {
-    document.getElementById("compost_box").style.backgroundColor = "#19c433";
-    document.getElementById("cans_box").style.backgroundColor = "#ebebe2";
-    document.getElementById("paper_box").style.backgroundColor = "#ebebe2";
-    document.getElementById("garbage_box").style.backgroundColor = "#ebebe2";
+    document.getElementById("compost_box").style.backgroundColor = "#15d110";
+    document.getElementById("cans_box").style.backgroundColor = "#f3f4ee";
+    document.getElementById("paper_box").style.backgroundColor = "#f3f4ee";
+    document.getElementById("garbage_box").style.backgroundColor = "#f3f4ee";
+    document.getElementById("garbage_box").style.color = "#000000";
   } else if (result == "Recyclable Cans/Plastic") {
-    document.getElementById("cans_box").style.backgroundColor = "#1d7acf";
-    document.getElementById("compost_box").style.backgroundColor = "#ebebe2";
-    document.getElementById("paper_box").style.backgroundColor = "#ebebe2";
-    document.getElementById("garbage_box").style.backgroundColor = "#ebebe2";
+    document.getElementById("cans_box").style.backgroundColor = "#2c87eb";
+    document.getElementById("compost_box").style.backgroundColor = "#f3f4ee";
+    document.getElementById("paper_box").style.backgroundColor = "#f3f4ee";
+    document.getElementById("garbage_box").style.backgroundColor = "#f3f4ee";
+    document.getElementById("garbage_box").style.color = "#000000";
   } else if (result == "Paper") {
-    document.getElementById("paper_box").style.backgroundColor = "#c7cf1d";
-    document.getElementById("compost_box").style.backgroundColor = "#ebebe2";
-    document.getElementById("cans_box").style.backgroundColor = "#ebebe2";
-    document.getElementById("garbage_box").style.backgroundColor = "#ebebe2";
+    document.getElementById("paper_box").style.backgroundColor = "#d1eb2c";
+    document.getElementById("compost_box").style.backgroundColor = "#f3f4ee";
+    document.getElementById("cans_box").style.backgroundColor = "#f3f4ee";
+    document.getElementById("garbage_box").style.backgroundColor = "#f3f4ee";
+    document.getElementById("garbage_box").style.color = "#000000";
   } else if (result == "Garbage") {
-    document.getElementById("garbage_box").style.backgroundColor = "#5b5c4e";
-    document.getElementById("compost_box").style.backgroundColor = "#ebebe2";
-    document.getElementById("cans_box").style.backgroundColor = "#ebebe2";
-    document.getElementById("paper_box").style.backgroundColor = "#ebebe2";
+    document.getElementById("garbage_box").style.backgroundColor = "#595a55";
+    document.getElementById("garbage_box").style.color = "#f6f6f6";
+    document.getElementById("compost_box").style.backgroundColor = "#f3f4ee";
+    document.getElementById("cans_box").style.backgroundColor = "#f3f4ee";
+    document.getElementById("paper_box").style.backgroundColor = "#f3f4ee";
   } else {
-    document.getElementById("compost_box").style.backgroundColor = "#ebebe2";
-    document.getElementById("cans_box").style.backgroundColor = "#ebebe2";
-    document.getElementById("paper_box").style.backgroundColor = "#ebebe2";
-    document.getElementById("garbage_box").style.backgroundColor = "#ebebe2";
+    document.getElementById("compost_box").style.backgroundColor = "#f3f4ee";
+    document.getElementById("cans_box").style.backgroundColor = "#f3f4ee";
+    document.getElementById("paper_box").style.backgroundColor = "#f3f4ee";
+    document.getElementById("garbage_box").style.backgroundColor = "#f3f4ee";
+    document.getElementById("garbage_box").style.color = "#000000";
   }
 }
 
