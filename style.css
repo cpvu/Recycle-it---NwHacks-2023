@@ -125,7 +125,7 @@ p {
     text-align: center;
 }
 
-[] button {
+button {
     background-color: transparent;
     background-repeat: no-repeat;
     border: white solid 1px;
