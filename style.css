@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+   }
 .container {
     height: 100vh;
     background-image: url('./images/background5.jpg');
@@ -39,13 +42,6 @@ body {
     font-family: 'roboto', sans-serif;
 }
 
-.img-container {
-    width: 23.3%;
-    height: 30%;
-    float: left;
-    margin-left: 1%;
-}
-
 #centered_div {
     margin: 0 auto;
     width: 90%;
@@ -75,4 +71,27 @@ nav a {
 nav a:hover {
     color: #333;
     background-color: antiquewhite;
+}
+
+#containerflex {
+    width: 100%;
+    display:flex; 
+    flex-direction: row;
+    justify-content: center;
+}
+
+.img-container {
+    margin: 20px 10px auto;
+    width: 25%;
+    min-height: 30%;
+}
+
+.text {
+    height: 150px;
+    width: 100%;
+    text-align: center;
+}
+
+footer {
+    margin-top: 75px;
 }
