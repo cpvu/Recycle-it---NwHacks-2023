@@ -28,25 +28,32 @@ async function init() {
   // append elements to the DOM
   document.getElementById("webcam-container").appendChild(webcam.canvas);
   labelContainer = document.getElementById("label-container");
-  for (let i = 0; i < maxPredictions; i++) {
-    // and class labels
-    labelContainer.appendChild(document.createElement("div"));
-  }
+  // for (let i = 0; i < maxPredictions; i++) {
+  //   // and class labels 
+  //   labelContainer.appendChild(document.createElement("div"));
+  // }
 }
 
 async function loop() {
   webcam.update(); // update the webcam frame
   await predict();
-  window.requestAnimationFrame(loop);
+  setInterval(window.requestAnimationFrame(loop), 1000);
 }
 
 // run the webcam image through the image model
 async function predict() {
   // predict can take in an image, video or canvas html element
   const prediction = await model.predict(webcam.canvas);
+  let dict = {};
   for (let i = 0; i < maxPredictions; i++) {
-    const classPrediction =
-      prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-    labelContainer.childNodes[i].innerHTML = classPrediction;
+    dict[prediction[i].className] = prediction[i].probability.toFixed(2);
+    // if (prediction[i].probability.toFixed(2) > highest) {
+    //   highest = prediction[i].probability.toFixed(2);
+    //   classPrediction = prediction[i].className;
+    // }
+    //prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+    //labelContainer.innerHTML = classPrediction;
   }
+  let result = Object.keys(dict).reduce(function(a, b){ return dict[a] > dict[b] ? a : b });
+  labelContainer.innerHTML = result;
 }
