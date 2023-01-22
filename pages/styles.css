@@ -30,6 +30,16 @@
     font-size: 30px;
     line-height: 200px;
 }
+
 #webcam-container {
     text-align: center;
+}
+
+body {
+    background-image: url("../images/background10.png");
+    background-position: center;
+
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
 }
