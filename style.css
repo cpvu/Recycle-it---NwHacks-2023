@@ -11,6 +11,7 @@ html {
     background-size: cover;
     margin: 0 auto;
     width: 100%;
+
 }
 
 .box {
@@ -33,7 +34,7 @@ html {
     margin-left: 7%;
     vertical-align: center;
     position: absolute;
-    top: 60%;
+    top: 62%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -98,11 +99,21 @@ nav a:hover {
 }
 
 .text {
-    height: 150px;
+    height: 200px;
     width: 100%;
     text-align: center;
 }
 
 footer {
     margin-top: 75px;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    padding-top: 15px;
+}
+
+p {
+    text-align: center;
 }
