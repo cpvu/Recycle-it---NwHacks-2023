@@ -15,7 +15,6 @@ html {
 }
 
 .box {
-    background-color: rgba(222, 222, 222, 0.37);
     width: 50%;
     float: left;
     padding: 10px;
@@ -37,11 +36,11 @@ html {
     top: 62%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    text-align: center;
 }
 
 body {
     margin: 0px;
-
 }
 
 .main {
@@ -116,4 +115,23 @@ h3 {
 
 p {
     text-align: center;
+}
+
+button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: white solid 1px;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 15px;
+    margin: 10px;
+    width: 150px;
+    height: 60px;
+    outline: none;
+}
+
+button:hover {
+    background-color: gray;
 }
