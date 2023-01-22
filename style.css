@@ -1,12 +1,35 @@
-.header {
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+.container {
+    height: 100vh;
+    background-image: url('./images/background5.jpg');
+    /* background-position: center;
+    Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
     margin: 0 auto;
-    font-family: 'roboto', sans-serif;
+    width: 100%;
+
+}
+
+.box {
+    background-color: rgba(222, 222, 222, 0.37);
+    width: 50%;
+    float: left;
+    padding: 10px;
+    margin-left: 7%;
+    vertical-align: center;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 body {
+    margin: 0px;
+
+}
+
+.main {
     /* background-image: url('./images/background2.jpg');
     background-repeat: no-repeat;
     background-position: center; */
@@ -35,4 +58,21 @@ footer {
 
 img {
     width: 100%;
+}
+
+nav {
+    background-color: #333;
+}
+
+nav a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    color: antiquewhite;
+    width: 100px;
+}
+
+nav a:hover {
+    color: #333;
+    background-color: antiquewhite;
 }
