@@ -26,10 +26,11 @@ async function init() {
   window.requestAnimationFrame(loop);
 
   // append elements to the DOM
-  document.getElementById("webcam-container").appendChild(webcam.canvas);
   labelContainer = document.getElementById("label-container");
+  document.getElementById("webcam-container").appendChild(webcam.canvas);
+
   // for (let i = 0; i < maxPredictions; i++) {
-  //   // and class labels 
+  //   // and class labels
   //   labelContainer.appendChild(document.createElement("div"));
   // }
 }
@@ -54,6 +55,13 @@ async function predict() {
     //prediction[i].className + ": " + prediction[i].probability.toFixed(2);
     //labelContainer.innerHTML = classPrediction;
   }
-  let result = Object.keys(dict).reduce(function(a, b){ return dict[a] > dict[b] ? a : b });
-  labelContainer.innerHTML = result;
+  let result = Object.keys(dict).reduce(function (a, b) {
+    return dict[a] > dict[b] ? a : b;
+  });
+
+  if (result == "Other") {
+    labelContainer.innerHTML = "";
+  } else {
+    labelContainer.innerHTML = result;
+  }
 }
