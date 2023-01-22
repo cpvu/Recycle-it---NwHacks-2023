@@ -20,7 +20,7 @@ async function init() {
 
   // Convenience function to setup a webcam
   const flip = true; // whether to flip the webcam
-  webcam = new tmImage.Webcam(screen.width - 100, screen.height - 100, flip); // width, height, flip
+  webcam = new tmImage.Webcam(1200, 600, flip); // width, height, flip
   await webcam.setup(); // request access to the webcam
   await webcam.play();
   window.requestAnimationFrame(loop);
@@ -59,9 +59,30 @@ async function predict() {
     return dict[a] > dict[b] ? a : b;
   });
 
-  if (result == "Other") {
-    labelContainer.innerHTML = "";
+  if (result == "Compostable Foods") {
+    document.getElementById("compost_box").style.backgroundColor = "#19c433";
+    document.getElementById("cans_box").style.backgroundColor = "#ebebe2";
+    document.getElementById("paper_box").style.backgroundColor = "#ebebe2";
+    document.getElementById("garbage_box").style.backgroundColor = "#ebebe2";
+  } else if (result == "Recyclable Cans/Plastic") {
+    document.getElementById("cans_box").style.backgroundColor = "#1d7acf";
+    document.getElementById("compost_box").style.backgroundColor = "#ebebe2";
+    document.getElementById("paper_box").style.backgroundColor = "#ebebe2";
+    document.getElementById("garbage_box").style.backgroundColor = "#ebebe2";
+  } else if (result == "Paper") {
+    document.getElementById("paper_box").style.backgroundColor = "#c7cf1d";
+    document.getElementById("compost_box").style.backgroundColor = "#ebebe2";
+    document.getElementById("cans_box").style.backgroundColor = "#ebebe2";
+    document.getElementById("garbage_box").style.backgroundColor = "#ebebe2";
+  } else if (result == "Garbage") {
+    document.getElementById("garbage_box").style.backgroundColor = "#5b5c4e";
+    document.getElementById("compost_box").style.backgroundColor = "#ebebe2";
+    document.getElementById("cans_box").style.backgroundColor = "#ebebe2";
+    document.getElementById("paper_box").style.backgroundColor = "#ebebe2";
   } else {
-    labelContainer.innerHTML = result;
+    document.getElementById("compost_box").style.backgroundColor = "#ebebe2";
+    document.getElementById("cans_box").style.backgroundColor = "#ebebe2";
+    document.getElementById("paper_box").style.backgroundColor = "#ebebe2";
+    document.getElementById("garbage_box").style.backgroundColor = "#ebebe2";
   }
 }
