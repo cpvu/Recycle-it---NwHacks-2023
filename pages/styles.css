@@ -1,12 +1,9 @@
-
 #center {
     position: relative;
-
     font-size: 50px;
-
 }
 
-#label-container {
+/* #label-container {
     position:absolute;
     margin-left: 4.2%;
     margin-top: 20%;
@@ -15,11 +12,24 @@
     text-align: center;
     font-size: 100px;
     border: 1px solid black;
-    
-  }
+} */
 
 
+#label-container {
+    text-align: center;
+}
 
+#label-container div {
+    display: inline-block;
+    margin: 40px;
+
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+
+    font-size: 30px;
+    line-height: 200px;
+}
 #webcam-container {
     text-align: center;
 }
