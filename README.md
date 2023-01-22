@@ -7,6 +7,6 @@ Junyoung(Tim) Lee
 
 
 ## Technologies Used 
-HTML / CSS / Javascript \n
-Python (Web Scraping) \n
+HTML / CSS / Javascript <br />
+Python (Web Scraping) <br />
 Teachable Machine (Tensorflow)
